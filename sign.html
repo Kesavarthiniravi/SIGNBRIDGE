@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SignBridge | Live Translator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>SignBridge</h1>
+  <p>AI-Powered Real-Time Sign Language Translator</p>
+  <img src="{{ url_for('video_feed') }}" width="640" height="480">
+  <br><br>
+  <a href="/translate">Go to Text Translator</a>
+</body>
+</html>
