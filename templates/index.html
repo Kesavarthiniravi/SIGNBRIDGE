@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SignBridge AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="navbar">
+
+        <div class="brand">
+            <div class="logo">🤟</div>
+
+            <div>
+                <h1>SignBridge AI</h1>
+                <p>Real-Time ASL Sign Recognition</p>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            AI System Ready
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Introduction -->
+        <section class="intro">
+
+            <div>
+                <p class="tag">AI • COMPUTER VISION • MACHINE LEARNING</p>
+
+                <h2>
+                    Breaking barriers through
+                    <span>sign recognition.</span>
+                </h2>
+
+                <p class="description">
+                    SignBridge AI uses MediaPipe hand landmarks and
+                    a deep learning model to recognize selected
+                    American Sign Language gestures in real time.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Main Dashboard -->
+        <section class="dashboard">
+
+            <!-- Camera -->
+            <div class="camera-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h3>Live Camera</h3>
+                        <p>Show your hand clearly to the camera</p>
+                    </div>
+
+                    <div class="live-badge">
+                        <span></span>
+                        LIVE
+                    </div>
+
+                </div>
+
+
+                <div class="camera-container">
+
+                    <img
+                        src="{{ url_for('video_feed') }}"
+                        alt="SignBridge Live Camera"
+                    >
+
+                    <div class="camera-overlay">
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                    </div>
+
+                </div>
+
+               
+
+            </div>
+
+
+            
+
+            </div>
+
+        </section>
+
+<section class="recognition-info">
+
+    <div>
+        <p class="tag">REAL-TIME RECOGNITION</p>
+
+        <h2>Sign detected by the AI model</h2>
+
+        <p class="recognition-description">
+            The AI analyzes hand movements and provides
+            a real-time prediction.
+        </p>
+    </div>
+
+</section>
+
+          
+
+
+        <!-- How it works -->
+        <section class="how-section">
+
+            <div class="section-title">
+
+                <div>
+                    <p class="tag">HOW IT WORKS</p>
+                    <h2>From hand movement to prediction</h2>
+                </div>
+
+            </div>
+
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Capture</h3>
+                    <p>
+                        Webcam captures the user's hand
+                        movement in real time.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Extract</h3>
+                    <p>
+                        MediaPipe extracts hand landmark
+                        coordinates from each frame.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Predict</h3>
+                    <p>
+                        The LSTM model analyzes the landmark
+                        sequence and predicts the sign.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            <strong>SignBridge AI</strong>
+            <span> • </span>
+            Selected ASL Sign Recognition
+        </div>
+
+        <div>
+            Built with Python • TensorFlow • MediaPipe • Flask
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
