@@ -271,7 +271,7 @@ The Flask application provides a browser-based interface for real-time recogniti
 
 The application integrates:
 
-``text
+```text
 
 Flask
   │
